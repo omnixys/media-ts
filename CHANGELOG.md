@@ -3,6 +3,13 @@
 All notable changes in this project will be documented in this file.
 
 
+## [3.0.1](https://github.com/omnixys/media-ts/compare/v3.0.0...v3.0.1) (2026-07-30)
+
+### Deps
+
+* **Deps:** fix imports ([](https://github.com/omnixys/media-ts/commit/5b424c2fac0226c348cbed999501bd487b668d6f))
+* **Deps:** update logger deps version ([](https://github.com/omnixys/media-ts/commit/6f4a343c60b962904489ddf4e00c8799d1bae5a9))
+
 ## [3.0.0](https://github.com/omnixys/media/compare/v2.0.2...v3.0.0) (2026-07-15)
 
 ### Update
