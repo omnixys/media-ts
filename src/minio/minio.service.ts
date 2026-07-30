@@ -22,7 +22,7 @@ import {
 } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { Inject, Injectable, OnModuleDestroy, Optional } from '@nestjs/common';
-import { OMNIXYS_LOGGER, type PlatformLogger } from '@omnixys/logger/token';
+import { OMNIXYS_LOGGER, type PlatformLogger } from '@omnixys/logger-ts/token';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { Buffer } from 'node:buffer';
 import { Readable } from 'node:stream';

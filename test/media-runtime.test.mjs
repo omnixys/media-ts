@@ -4,7 +4,7 @@ import {
   MinioStorageService,
   StorageModule,
 } from '../dist/index.js';
-import { ContextAccessor } from '@omnixys/context/accessor';
+import { ContextAccessor } from '@omnixys/context-ts/accessor';
 import assert from 'node:assert/strict';
 import { Readable } from 'node:stream';
 import test from 'node:test';

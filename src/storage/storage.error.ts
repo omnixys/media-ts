@@ -1,5 +1,5 @@
 import { InternalServerErrorException } from '@nestjs/common';
-import { ContextAccessor } from '@omnixys/context/accessor';
+import { ContextAccessor } from '@omnixys/context-ts/accessor';
 
 export class MediaStorageException extends InternalServerErrorException {
   readonly requestId!: string;
