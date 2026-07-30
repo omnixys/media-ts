@@ -59,6 +59,7 @@ export default {
           { type: 'perf', release: 'patch' },
           { type: 'refactor', release: 'patch' },
           { type: 'revert', release: 'patch' },
+          { type: 'update', release: 'patch' },
 
           // Explicitly ignore these types
           { type: 'docs', release: false },
@@ -177,7 +178,7 @@ export default {
 ---
 
 🏢 **Organization:** Omnixys
-📦 **Package:** Media
+📦 **Package:** Media TS
 🔗 **Repository:** Repository: <%= options.repositoryUrl %>
 🧭 **Docs:** https://omnixys.com/docs
 `,

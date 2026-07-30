@@ -73,7 +73,7 @@ jobs:
         run: |
           gh variable set CURRENT_VERSION \
             --body "$CURRENT_VERSION" \
-            --repo omnixys/${{ vars.PACKAGE }}
+            --repo omnixys/${{ vars.PACKAGE }}-ts
 
       - name: Update org variable
         env:
