@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [3.0.2](https://github.com/omnixys/media-ts/compare/v3.0.1...v3.0.2) (2026-07-30)
+
+### Deps
+
+* **Deps:** fix imports ([](https://github.com/omnixys/media-ts/commit/85f716c3357e1e786baaed824cb9c00312ac53fe))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/media ([](https://github.com/omnixys/media-ts/commit/60329bb5055ca9b7dec62c2653ba948cdbaf33f0))
+
 ## [3.0.1](https://github.com/omnixys/media-ts/compare/v3.0.0...v3.0.1) (2026-07-30)
 
 ### Deps
