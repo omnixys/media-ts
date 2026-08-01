@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [3.0.3](https://github.com/omnixys/media-ts/compare/v3.0.2...v3.0.3) (2026-08-01)
+
+### Deps
+
+* **Deps:** update omnixs package deps ([](https://github.com/omnixys/media-ts/commit/1453abfa418ef2e39b940ab2d8ce10d54333a2db))
+
 ## [3.0.2](https://github.com/omnixys/media-ts/compare/v3.0.1...v3.0.2) (2026-07-30)
 
 ### Deps
