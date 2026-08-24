@@ -22,7 +22,7 @@ import {
 } from '@aws-sdk/client-s3';
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
 import { Inject, Injectable, OnModuleDestroy, Optional } from '@nestjs/common';
-import { OMNIXYS_LOGGER, type PlatformLogger } from '@omnixys/logger-ts/token';
+import { OmnixysLogger } from '@omnixys/logger-ts';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { Buffer } from 'node:buffer';
 import { Readable } from 'node:stream';
@@ -39,13 +39,13 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
   private closePromise?: Promise<void>;
   private readonly drainWaiters = new Set<() => void>();
   private readonly operationScope = new AsyncLocalStorage<boolean>();
+  private readonly log;
 
   constructor(
     @Inject(STORAGE_OPTIONS) private readonly options: StorageModuleOptions,
-    @Optional()
-    @Inject(OMNIXYS_LOGGER)
-    private readonly logger?: PlatformLogger,
+    @Optional() private readonly logger?: OmnixysLogger,
   ) {
+    this.log = this.logger?.log(this.constructor.name);
     validateOptions(options);
     this.client = new S3Client({
       region: options.region,
@@ -124,6 +124,11 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
   }): Promise<string> {
     const partSize = params.partSizeBytes ?? DEFAULT_MULTIPART_PART_SIZE;
     if (!Number.isSafeInteger(partSize) || partSize < MIN_MULTIPART_PART_SIZE) {
+      this.log?.error('Multipart upload rejected, part size too small', {
+        key: params.key,
+        partSizeBytes: partSize,
+        minimumBytes: MIN_MULTIPART_PART_SIZE,
+      });
       throw new RangeError('Multipart partSizeBytes must be at least 5 MiB');
     }
 
@@ -169,10 +174,9 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
       try {
         await this.abortMultipartUpload(handle);
       } catch (abortError) {
-        this.logger
-          ?.child(MinioStorageService.name)
-          .error('Multipart cleanup failed', { key: params.key, error: abortError });
+        this.log?.error('Multipart cleanup failed', { key: params.key, error: abortError });
       }
+      this.log?.error('Multipart upload failed', { key: params.key, error });
       throw error;
     }
   }
@@ -192,6 +196,9 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
         { abortSignal: params.signal },
       );
       if (!response.UploadId) {
+        this.log?.error('Storage provider did not return a multipart upload ID', {
+          key: params.key,
+        });
         throw new MediaStorageException(
           'MEDIA_MULTIPART_ID_MISSING',
           'Storage provider did not return a multipart upload ID',
@@ -210,6 +217,10 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
     },
   ): Promise<MultipartUploadPart> {
     if (!Number.isSafeInteger(params.partNumber) || params.partNumber < 1) {
+      this.log?.error('Multipart part rejected, invalid part number', {
+        key: params.key,
+        partNumber: params.partNumber,
+      });
       throw new RangeError('Multipart partNumber must be a positive integer');
     }
     return this.operate('multipart_part', params.key, params.signal, async () => {
@@ -224,6 +235,10 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
         { abortSignal: params.signal },
       );
       if (!response.ETag) {
+        this.log?.error('Storage provider did not return a multipart ETag', {
+          key: params.key,
+          partNumber: params.partNumber,
+        });
         throw new MediaStorageException(
           'MEDIA_MULTIPART_ETAG_MISSING',
           'Storage provider did not return a multipart ETag',
@@ -241,6 +256,7 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
     },
   ): Promise<string> {
     if (params.parts.length === 0) {
+      this.log?.error('Multipart upload rejected, no parts provided', { key: params.key });
       throw new RangeError('Multipart upload requires at least one part');
     }
     return this.operate('multipart_complete', params.key, params.signal, async () => {
@@ -369,6 +385,7 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
       };
     } catch (error) {
       if (isAbortError(error, options.signal)) throw error;
+      this.log?.error('Storage health check failed', { error });
       return {
         healthy: false,
         status: 'unavailable',
@@ -401,13 +418,17 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
       };
       const timeout = setTimeout(() => {
         this.drainWaiters.delete(waiter);
-        reject(
-          new MediaStorageException(
-            'MEDIA_DRAIN_TIMEOUT',
-            `Storage drain timed out after ${timeoutMs}ms`,
-            { timeoutMs, activeOperations: this.activeOperations },
-          ),
+        const error = new MediaStorageException(
+          'MEDIA_DRAIN_TIMEOUT',
+          `Storage drain timed out after ${timeoutMs}ms`,
+          { timeoutMs, activeOperations: this.activeOperations },
         );
+        this.log?.error('Storage drain timed out', {
+          timeoutMs,
+          activeOperations: this.activeOperations,
+          error,
+        });
+        reject(error);
       }, timeoutMs);
       this.drainWaiters.add(waiter);
     });
@@ -435,6 +456,11 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
     task: () => Promise<T>,
   ): Promise<T> {
     if (this.closed || (this.closing && !this.operationScope.getStore())) {
+      this.log?.error('Storage operation rejected, client not accepting operations', {
+        operation,
+        key,
+        status: this.status(),
+      });
       throw new MediaStorageException(
         'MEDIA_STORAGE_CLOSED',
         'Storage client is not accepting operations',
@@ -449,9 +475,7 @@ export class MinioStorageService implements FileStorage, OnModuleDestroy {
       if (error instanceof MediaStorageException || isAbortError(error, signal)) {
         throw error;
       }
-      this.logger
-        ?.child(MinioStorageService.name)
-        .error('Storage operation failed', { operation, key, error });
+      this.log?.error('Storage operation failed', { operation, key, error });
       throw new MediaStorageException(
         `MEDIA_${operation.toUpperCase()}_FAILED`,
         'Storage operation failed',
