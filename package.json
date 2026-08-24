@@ -41,8 +41,8 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^20.5.3",
     "@nestjs/common": "^11.1.28",
-    "@omnixys/context-ts": "^3.1.1",
-    "@omnixys/logger-ts": "^3.2.2",
+    "@omnixys/context-ts": "^3.2.1",
+    "@omnixys/logger-ts": "^3.2.5",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -64,8 +64,8 @@
   },
   "peerDependencies": {
     "@nestjs/common": "^11.0.0",
-    "@omnixys/context-ts": "^3.1.1",
-    "@omnixys/logger-ts": "^3.2.2",
+    "@omnixys/context-ts": "^3.2.1",
+    "@omnixys/logger-ts": "^3.2.5",
     "reflect-metadata": "^0.2.2"
   }
 }
