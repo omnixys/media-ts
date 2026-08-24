@@ -3,6 +3,20 @@
 All notable changes in this project will be documented in this file.
 
 
+## [3.1.0](https://github.com/omnixys/media-ts/compare/v3.0.3...v3.1.0) (2026-08-24)
+
+### Agent
+
+* **Agent:** add repository development instructions ([](https://github.com/omnixys/media-ts/commit/b5b67f6477214bb2a6c171ed5dfb2f6993c46028))
+
+### Context
+
+* **Context:** update dependency ([](https://github.com/omnixys/media-ts/commit/afeca7dce637328bbc0aa0c4838e4fd7847f75e3))
+
+### Media
+
+* **Media:** log errors via OmnixysLogger in minio service ([](https://github.com/omnixys/media-ts/commit/ae0121b394fd8ba21c94e7bcca3d11d2691e022a))
+
 ## [3.0.3](https://github.com/omnixys/media-ts/compare/v3.0.2...v3.0.3) (2026-08-01)
 
 ### Deps
