@@ -3,6 +3,13 @@
 All notable changes in this project will be documented in this file.
 
 
+## [3.1.1](https://github.com/omnixys/media-ts/compare/v3.1.0...v3.1.1) (2026-08-28)
+
+### Deps
+
+* **Deps:** update contracts-ts ([](https://github.com/omnixys/media-ts/commit/d20f0279333345b46040957401f10647c455fa30))
+* **Deps:** update contracts-ts ([](https://github.com/omnixys/media-ts/commit/2f7a5458c0238519beb5e2c902cc5f6a90c09303))
+
 ## [3.1.0](https://github.com/omnixys/media-ts/compare/v3.0.3...v3.1.0) (2026-08-24)
 
 ### Agent
