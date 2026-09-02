@@ -3,7 +3,10 @@
   "version": "3.1.1",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=26.8.1 <27"
+  },
   "description": "Shared utilities and types for Omnixys microservices",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

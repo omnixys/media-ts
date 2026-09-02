@@ -11,7 +11,7 @@ Omnixys media/storage package for TypeScript (S3/MinIO).
 
 - Repository path: `packages/ts/media` (relative to the Omnixys root)
 - Package: `@omnixys/media-ts` (version: 3.0.3)
-- Runtime: Node >=20 (pnpm >=10.33.0)
+- Runtime: Node >=26.8.1 (pnpm >=11.24.0)
 - Kind: Shared Package
 
 ## Architecture
@@ -32,7 +32,7 @@ published to GitHub Packages (@omnixys scope); consumed by omnixys services and 
 ## Commands
 
 Commands below are the authoritative validation commands for this repository. Run them
-with the appropriate tooling (observed versions: node 26.6.0, pnpm 11.20.0, uv 0.12.1, java 26.0.2).
+with the appropriate tooling (observed versions: node 26.8.1, pnpm 11.24.0, uv 0.12.8, java 26.0.2).
 
 ### Install
 

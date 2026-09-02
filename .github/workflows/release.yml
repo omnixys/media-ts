@@ -13,10 +13,6 @@ jobs:
       released: ${{ steps.semantic.outputs.released }}
       version: ${{ steps.read_version.outputs.version }}
 
-    strategy:
-      matrix:
-        node-version: [24.10.0]
-
     permissions:
       contents: write
       issues: write
@@ -27,21 +23,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup npm registry auth
-        run: |
-          echo "@omnixys:registry=https://npm.pkg.github.com" >> .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${OMNIXYS_TOKEN}" >> .npmrc
-        env:
-          OMNIXYS_TOKEN: ${{ secrets.OMNIXYS_TOKEN }}
+      - name: ⚙️ Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.24.0
 
-      - name: ⚙️ Enable Corepack (pnpm)
-        run: |
-          corepack enable
-
-      - name: ⚙️ Setup Node.js ${{ matrix.node-version }}
+      - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '26.8.1'
           cache: 'pnpm'
 
       - name: 📦 Install dependencies
@@ -95,7 +85,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -104,16 +94,16 @@ jobs:
           git fetch origin main
           git checkout origin/main
 
-      - uses: pnpm/action-setup@v3
+      - name: ⚙️ Setup pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 10.33.0
+          version: 11.24.0
 
-      - name: Setup npm registry auth
-        run: |
-          echo "@omnixys:registry=https://npm.pkg.github.com" >> .npmrc
-          echo "//npm.pkg.github.com/:_authToken=${OMNIXYS_TOKEN}" >> .npmrc
-        env:
-          OMNIXYS_TOKEN: ${{ secrets.OMNIXYS_TOKEN }}
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '26.8.1'
+          cache: 'pnpm'
 
       - run: pnpm install
       - run: pnpm build
