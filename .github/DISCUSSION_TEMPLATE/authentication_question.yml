@@ -1,0 +1,61 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+# name: ❓ Authentication Service Question or Support Request
+# description: Ask a question or request help with setup, deployment, or usage of the Authentication Service.
+labels: ["question", "authentication"]
+title: "[Authentication Question] "
+# category: "❓ Questions & Support"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🙋 Question
+        Please describe your question or issue as clearly as possible.  
+        ⚠️ **Do not** include any passwords, access tokens, or private keys.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      placeholder: |
+        Examples:
+        - How do I configure Keycloak for multi-tenant login?
+        - Why does JWT refresh fail when Redis cache is enabled?
+        - How can I debug Kafka event propagation between services?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      placeholder: |
+        Provide relevant background such as:
+        - Environment (Docker Compose, Local Node, Kubernetes)
+        - Authentication Service version and dependencies
+        - Any related error messages or logs
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Output (optional)
+      description: Paste sanitized logs or terminal output that help explain the problem.
+      render: shell
+    validations:
+      required: false

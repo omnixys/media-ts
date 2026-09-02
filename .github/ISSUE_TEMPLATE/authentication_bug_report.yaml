@@ -1,0 +1,87 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+name: 🐛 Authentication Service Bug Report
+description: Report a reproducible issue or unexpected behavior in the Authentication microservice
+title: '[Authentication Bug] '
+labels: [bug, authentication, needs-triage]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please include as much detail as possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug summary
+      description: What went wrong?
+      placeholder: Login mutation fails with 400 error...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the bug?
+      placeholder: |
+        1. Start the authentication-service with `pnpm run start:dev`
+        2. Send a login mutation via GraphQL
+        3. Observe error response
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: Login mutation should return a valid access token.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Paste logs or attach screenshots (omit secrets).
+      render: shell
+    validations:
+      required: false
+
+  - type: dropdown
+    id: env
+    attributes:
+      label: Environment
+      options:
+        - Local Development
+        - Docker Compose
+        - Production Deployment
+    validations:
+      required: true

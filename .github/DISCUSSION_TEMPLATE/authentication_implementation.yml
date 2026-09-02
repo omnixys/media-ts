@@ -1,0 +1,73 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+# name: 🧪 Implementation or Architecture Discussion
+# description: Discuss technical design, architecture, or integration details for the Authentication Service.
+labels: ["🧪 Implementation", "authentication"]
+title: "[Authentication Implementation] "
+# category: "🧪 Implementation Details"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Implementation Discussion
+        Use this template to discuss technical topics such as:
+        - Keycloak realm synchronization
+        - Redis session clustering
+        - Kafka event design
+        - GraphQL schema structure or AuthZ strategy
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      placeholder: |
+        Describe the component or concept you'd like to discuss:
+        e.g., "Proposal for token refresh microflow", "Improving user session TTL handling"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Technical Details
+      placeholder: |
+        Include relevant code snippets, architecture diagrams, or performance observations.
+        Mention technologies (NestJS, Keycloak, Redis, Kafka) involved in this topic.
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Desired Outcome
+      placeholder: |
+        What is the goal of this discussion?
+        - Clarify design direction
+        - Choose between alternative implementations
+        - Define new integration behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References (optional)
+      placeholder: |
+        Link to related issues, PRs, or documentation.
+        Example: Issue #42 – Keycloak event stream optimization
+    validations:
+      required: false

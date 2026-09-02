@@ -9,7 +9,7 @@
 
 - Kind: Shared Package
 - Package: `@omnixys/media-ts` (version: 3.0.3)
-- Runtime: Node >=20 (pnpm >=10.33.0)
+- Runtime: Node >=26.8.1 (pnpm >=11.24.0)
 - Description: Omnixys media/storage package for TypeScript (S3/MinIO).
 - Architecture: src/ media/storage
 - Database: n/a; Migrations: n/a

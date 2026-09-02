@@ -1,0 +1,8 @@
+allowBuilds:
+  '@swc/core': true
+  protobufjs: true
+minimumReleaseAgeExclude:
+  - '@omnixys/context-ts@4.0.2'
+  - '@omnixys/contracts-ts@4.0.0'
+  - '@omnixys/logger-ts@4.0.0'
+  - '@omnixys/observability-ts@4.0.0'

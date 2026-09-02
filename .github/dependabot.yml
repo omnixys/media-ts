@@ -1,0 +1,132 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+#
+# Omnixys Workflow Suite – dependabot.yml
+# Purpose: Automated dependency management and security updates across ecosystems.
+# Language: Universal
+
+version: 2
+updates:
+  # 🟦 Node / pnpm Dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "03:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "deps(node)"
+      include: "scope"
+    labels:
+      - "📦 dependencies"
+      - "🧩 needs-review"
+    open-pull-requests-limit: 10
+    rebase-strategy: auto
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "all"
+    ignore:
+      - dependency-name: "eslint"
+        versions: ["<9.0.0"]
+      - dependency-name: "typescript"
+        versions: ["<5.0.0"]
+
+  # 🐳 Docker Base Image Updates
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "04:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "deps(docker)"
+      include: "scope"
+    labels:
+      - "🐳 docker"
+      - "🧩 needs-review"
+    rebase-strategy: auto
+    ignore:
+      - dependency-name: "node"
+        versions: ["<20.0.0"]
+
+  # ⚙️ GitHub Actions Updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "05:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "deps(actions)"
+      include: "scope"
+    labels:
+      - "🧠 ci"
+      - "📦 dependencies"
+    open-pull-requests-limit: 5
+    rebase-strategy: auto
+
+  # ☕ Java / Maven Dependencies (for microservices)
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "05:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "deps(java)"
+      include: "scope"
+    labels:
+      - "☕ java"
+      - "📦 dependencies"
+    rebase-strategy: auto
+
+  # 🧱 Python Dependencies (FastAPI, tooling, or scripts)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "06:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "deps(python)"
+      include: "scope"
+    labels:
+      - "🐍 python"
+      - "📦 dependencies"
+    rebase-strategy: auto
+
+  # 🔐 Security & CVE Prioritization Updates
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "02:00"
+      timezone: "Europe/Berlin"
+    commit-message:
+      prefix: "security"
+      include: "scope"
+    labels:
+      - "🔒 security"
+      - "⚠️ vulnerability"
+    allow:
+      - dependency-type: "direct"
+    rebase-strategy: auto
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]

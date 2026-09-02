@@ -1,0 +1,84 @@
+ # @license GPL-3.0-or-later
+ # Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+ #
+ # This program is free software: you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+ # the Free Software Foundation, either version 3 of the License, or
+ # (at your option) any later version.
+ #
+ # This program is distributed in the hope that it will be useful,
+ # but WITHOUT ANY WARRANTY; without even the implied warranty of
+ # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ # See the GNU General Public License for more details.
+ #
+ # For more information, visit <https://www.gnu.org/licenses/>.
+ 
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/package.json'
+          - '**/package-lock.json'
+          - '**/pyproject.toml'
+          - '**/build.gradle'
+          - '**/build.gradle.kts'
+          - '**/pom.xml'
+
+github-actions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/*.yml'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/**'
+          - '.github/**'
+          - 'devtools/**'
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+          - 'docs/**'
+
+security:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/SECURITY.md'
+          - '**/*keycloak*'
+          - '**/*auth*'
+          - '**/*.pem'
+          - '**/*.crt'
+
+frontend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'apps/frontend/**'
+          - 'src/frontend/**'
+
+backend:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'apps/backend/**'
+          - 'src/backend/**'
+
+feature:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'src/**'
+          - 'apps/**'
+          - 'features/**'
+
+bug:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.ts'
+          - '**/*.java'
+          - '**/*.py'
+
+refactor:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*service*'
+          - '**/*controller*'
+          - '**/*resolver*'

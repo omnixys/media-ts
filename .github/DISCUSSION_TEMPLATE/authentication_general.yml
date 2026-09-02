@@ -1,0 +1,49 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+# name: 🧵 General Discussion
+# description: Start an open discussion or share general feedback about the Authentication Service.
+labels: ["general", "authentication"]
+title: "[Authentication Service Discussion] "
+# category: "🧵 General"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💬 Topic
+        This space is for open conversations, brainstorming, and general feedback related to the Authentication Service.
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: What would you like to discuss?
+      placeholder: |
+        Examples:
+        - General thoughts on Keycloak integration
+        - Feedback on token handling design
+        - Ideas for improving developer experience
+        - Cross-service communication patterns
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context (optional)
+      placeholder: |
+        Include background information, relevant links, or references to other discussions or issues.
+    validations:
+      required: false

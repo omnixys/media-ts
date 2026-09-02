@@ -1,0 +1,48 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+name: 💡 Authentication Service Feature Request
+description: Suggest a new feature or enhancement for the Authentication microservice
+title: '[Authentication Feature] '
+labels: [enhancement, authentication]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your idea! Please describe clearly what you want to improve.
+
+  - type: input
+    id: title
+    attributes:
+      label: Feature title
+      placeholder: Add MFA support for Keycloak users
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      placeholder: What should this feature do, and how does it improve authentication flow?
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation / Use Case
+      placeholder: Why is this feature important? Describe the real-world problem it solves.
+    validations:
+      required: true

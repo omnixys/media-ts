@@ -1,0 +1,45 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+name: ✅ Task
+description: Create or track a technical task within the Authentication Service project
+title: '[Auth Task] '
+labels: ['task', 'authentication']
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Task summary
+      placeholder: e.g., Refactor Keycloak service logging
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Task details
+      placeholder: |
+        - Purpose of this task
+        - Expected deliverables
+        - Dependencies or blockers
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Code merged & tested
+        - [ ] Pipeline green
+        - [ ] Docs updated

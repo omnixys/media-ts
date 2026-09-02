@@ -3,7 +3,10 @@
   "version": "3.1.1",
   "type": "module",
   "private": false,
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=26.8.1 <27"
+  },
   "description": "Shared utilities and types for Omnixys microservices",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -41,8 +44,8 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^20.5.3",
     "@nestjs/common": "^11.1.28",
-    "@omnixys/context-ts": "^3.2.2",
-    "@omnixys/logger-ts": "^3.2.7",
+    "@omnixys/context-ts": "^4.0.2",
+    "@omnixys/logger-ts": "^4.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -55,7 +58,7 @@
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-sort-imports": "^1.8.11",
     "reflect-metadata": "^0.2.2",
-    "semantic-release": "^25.0.8",
+    "semantic-release": "^25.0.9",
     "typescript": "^5.9.3"
   },
   "dependencies": {
@@ -64,8 +67,8 @@
   },
   "peerDependencies": {
     "@nestjs/common": "^11.0.0",
-    "@omnixys/context-ts": "^3.2.2",
-    "@omnixys/logger-ts": "^3.2.7",
+    "@omnixys/context-ts": "^4.0.2",
+    "@omnixys/logger-ts": "^4.0.0",
     "reflect-metadata": "^0.2.2"
   }
 }
