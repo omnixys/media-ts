@@ -15,13 +15,13 @@ jobs:
       - name: Ensure repo default service label
         uses: actions/github-script@v8
         env:
-          SERVICE: ${{ vars.SERVICE }}
+          PACKAGE: ${{ vars.PACKAGE }}
         with:
           script: |
-            const service = process.env.SERVICE;
+            const service = process.env.PACKAGE;
 
             if (!service) {
-              core.setFailed('SERVICE secret is not defined');
+              core.setFailed('PACKAGE secret is not defined');
               return;
             }
 

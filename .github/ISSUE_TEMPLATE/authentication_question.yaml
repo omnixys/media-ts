@@ -1,0 +1,73 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+name: ❓ Authentication Service Question or Help Request
+description: Ask a question or request help regarding setup, configuration, or usage of the Authentication Service.
+title: '[Authentication Question] '
+labels: ['question', 'authentication', 'needs-triage']
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🙋 Question
+        Please describe your question or issue clearly.  
+        Do **not** include passwords, JWTs, or other sensitive credentials.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      placeholder: |
+        Example:
+        - How do I configure Keycloak realms for multiple clients?
+        - Why does Redis session caching fail during token refresh?
+        - How can I verify JWT expiration within a NestJS guard?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      placeholder: |
+        Describe what you were working on:
+        - Which version of the Authentication Service?
+        - Are you running via Docker Compose, local Node, or Kubernetes?
+        - Any relevant dependencies (Keycloak, Redis, Kafka)?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Select the environment where the issue occurs.
+      options:
+        - Local Development
+        - Docker Compose
+        - Kubernetes Cluster
+        - Production Deployment
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Messages
+      description: Paste sanitized log output or stack traces that help us understand the issue.
+      render: shell
+    validations:
+      required: false

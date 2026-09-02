@@ -1,0 +1,51 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+name: 🆘 Authentication Service Support Request
+description: Get help with setup, configuration, or usage of the Authentication Service
+title: '[Authentication Support] '
+labels: [support, question, authentication]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need help with setup or debugging? Please provide as much context as possible.
+
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      placeholder: e.g., Keycloak setup, GraphQL login mutation, Redis connection, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Describe what you need help with, including relevant logs or configs.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: env
+    attributes:
+      label: Environment
+      options:
+        - Local Development
+        - Docker Compose
+        - Production Deployment
+    validations:
+      required: false

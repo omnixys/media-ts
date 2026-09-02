@@ -1,0 +1,50 @@
+# @license GPL-3.0-or-later
+# Copyright (C) 2025 Caleb Gyamfi - Omnixys Technologies
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU General Public License for more details.
+#
+# For more information, visit <https://www.gnu.org/licenses/>.
+
+# name: 💡 Authentication Service Idea or Proposal
+# description: Share an idea or suggestion to improve the Authentication microservice.
+labels: ["idea", "authentication"]
+title: "[Authentication Service Idea] "
+# category: "💡 Ideas & Suggestions"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💭 Description
+        Propose an improvement, feature, or workflow enhancement for the Authentication Service.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What are you proposing?
+      placeholder: |
+        Example ideas:
+        - Add OpenID Connect dynamic client registration
+        - Support passwordless login via WebAuthn
+        - Improve token refresh logging and error handling
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why is this beneficial?
+      placeholder: |
+        Explain the impact:
+        - How does this improve security or developer experience?
+        - Which users or components (Keycloak, Redis, Kafka, JWT) would benefit?
+    validations:
+      required: true
