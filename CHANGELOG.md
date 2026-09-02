@@ -3,6 +3,26 @@
 All notable changes in this project will be documented in this file.
 
 
+## [4.0.0](https://github.com/omnixys/media-ts/compare/v3.1.1...v4.0.0) (2026-09-02)
+
+### Ci
+
+* **Ci:** add missing labeler and dependabot config to match contracts ([](https://github.com/omnixys/media-ts/commit/a596a0cb755f0d180fb3f10d65985df14e77f660))
+* **Ci:** add PR build check workflow for main ([](https://github.com/omnixys/media-ts/commit/959041c33822d598f2bc13996241bc85f7389307))
+* **Ci:** add npm registry auth before install in release workflow ([](https://github.com/omnixys/media-ts/commit/0af1f4b0139c0d32711b5c98b79b48d63e56a522))
+
+### Deps
+
+* **Deps:** update omnixys deps ([](https://github.com/omnixys/media-ts/commit/d05de3dda6109021bba07d53d032297290655950))
+
+### Other
+
+* **Other:** Merge pull request #1 from omnixys/migration/uuid-v7 ([](https://github.com/omnixys/media-ts/commit/c76efd1290a0b2485ce4084edcd05631ab36935c)), closes [#1](https://github.com/omnixys/media-ts/issues/1)
+
+### Runtime
+
+* **Runtime:** require node 26.8.1 and pnpm 11.24.0 ([](https://github.com/omnixys/media-ts/commit/c0b5b762ffcf86e69481c954a1362a475429d489))
+
 ## [3.1.1](https://github.com/omnixys/media-ts/compare/v3.1.0...v3.1.1) (2026-08-28)
 
 ### Deps
