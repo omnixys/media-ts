@@ -22,11 +22,11 @@ importers:
         specifier: ^11.1.28
         version: 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
       '@omnixys/context-ts':
-        specifier: ^4.0.2
-        version: 4.0.2(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)
+        specifier: ^4.1.0
+        version: 4.1.0(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)
       '@omnixys/logger-ts':
-        specifier: ^4.0.0
-        version: 4.0.0(b9679a7fc644f5206053cb534e4d1d5f)
+        specifier: ^4.1.0
+        version: 4.1.0(8c3e26c1ba158aaa796f3866e6fd516f)
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@25.0.9(supports-color@7.2.0)(typescript@5.9.3))
@@ -372,45 +372,45 @@ packages:
   '@octokit/types@16.0.0':
     resolution: {integrity: sha512-sKq+9r1Mm4efXW1FCk7hFSeJo4QKreL/tTbR0rz/qx/r1Oa2VV83LTA/H/MuCOX7uCIJmQVRKBcbmWoySjAnSg==}
 
-  '@omnixys/context-ts@4.0.2':
-    resolution: {integrity: sha512-rc/4a1bU49M+dbY1cPzR1fwtJj5OWDSSxsEBuRBt4tNXQM8YCCKdj8EIG7aZqXj3rFESNP7E4z3GMCMS6wnbtA==, tarball: https://npm.pkg.github.com/download/@omnixys/context-ts/4.0.2/282e65db8a6f315fc207173e978ad349ebdf0fd1}
+  '@omnixys/context-ts@4.1.0':
+    resolution: {integrity: sha512-/h2ja4gIZZ6P9QO7j9YnRHAGCgch4dNulo4H2P8/l8KeBAgNlC3mH4cQ/b+EjxQN0nZGb21/5BkmB8HWo/zpMw==, tarball: https://npm.pkg.github.com/download/@omnixys/context-ts/4.1.0/768a69d73afdae97f46e4660fd9e889f5bff7ad3}
     engines: {node: '>=26.8.1 <27'}
     peerDependencies:
       '@fastify/cookie': ^11.0.0
       '@nestjs/common': ^10.0.0 || ^11.0.0
       '@nestjs/core': ^10.0.0 || ^11.0.0
       '@nestjs/graphql': ^13.2.4
-      '@omnixys/contracts-ts': ^4.0.0
+      '@omnixys/contracts-ts': ^4.1.0
       fastify: ^5.8.4
       graphql: ^16.13.2
       rxjs: ^7.8.2
 
-  '@omnixys/contracts-ts@4.0.0':
-    resolution: {integrity: sha512-PVCCpYe1tIxGM3I8hdAuSQWJLyGaqxfThmM0y6fd1IRSJ6YoOf3609DxJaXlkkqjpHHHU+/CULGhu/l46IHpJg==, tarball: https://npm.pkg.github.com/download/@omnixys/contracts-ts/4.0.0/fd4a7ac4c7f9d401c52fdce8247d3755129c1222}
+  '@omnixys/contracts-ts@4.1.0':
+    resolution: {integrity: sha512-X7ld7okD4yOdtWwnWARnw7WWi9rcukl7zidL9br1gZgRDrbbKYWG6pSPwzFLiuTqo0vNomeh4c1kAlKZ08HBlQ==, tarball: https://npm.pkg.github.com/download/@omnixys/contracts-ts/4.1.0/3bc71bcba535f0ef5e15bc60484b2bb50428e470}
     engines: {node: '>=26.8.1 <27'}
     peerDependencies:
       '@nestjs/common': ^11.1.27
 
-  '@omnixys/logger-ts@4.0.0':
-    resolution: {integrity: sha512-0EayKPnSS5eeBkT691FbavgaTl1oi0nOe/Tp55Ate75JCA5gGQU+7mm/tblzq5Lv3nsqFu6C74YMHUONMmWvAg==, tarball: https://npm.pkg.github.com/download/@omnixys/logger-ts/4.0.0/53ce7f30c6801d03daa81f347517ee3300233bfb}
+  '@omnixys/logger-ts@4.1.0':
+    resolution: {integrity: sha512-m/UY4hTxFbNCzaXyrHX7vSlq2XJOzFb4ORga03p3zZtv7JPpravQ2msoVLZXfc6WHqvyrEPhvcEjvMA8nYm/Yg==, tarball: https://npm.pkg.github.com/download/@omnixys/logger-ts/4.1.0/20ebb54190791f4901dca1d9abab3b890a9e2a20}
     engines: {node: '>=26.8.1 <27'}
     peerDependencies:
       '@nestjs/common': ^11.0.0
       '@nestjs/core': ^11.1.17
-      '@omnixys/context-ts': ^4.0.2
-      '@omnixys/contracts-ts': ^4.0.0
-      '@omnixys/observability-ts': ^4.0.0
+      '@omnixys/context-ts': ^4.1.0
+      '@omnixys/contracts-ts': ^4.1.0
+      '@omnixys/observability-ts': ^4.1.0
       '@opentelemetry/api': ^1.9.0
 
-  '@omnixys/observability-ts@4.0.0':
-    resolution: {integrity: sha512-pocMRD+MJpvNqckEyNHIrJltrbmWDJEHPdFgBsNNhIroZ12HKQtfUTDKXARweve0v5Wbul/mhJAS3YKNPs5/RQ==, tarball: https://npm.pkg.github.com/download/@omnixys/observability-ts/4.0.0/381ac112a9be99dea6c5c82ee95a6130b7f70d9d}
+  '@omnixys/observability-ts@4.1.0':
+    resolution: {integrity: sha512-UbULNqgvdwJnkFDl6wiMoBK1C3mkF7K+ivUe/3Jp8C8Z89c34pCKHDOfez/z7htacQspAvmucGFHmvqeAsfc2g==, tarball: https://npm.pkg.github.com/download/@omnixys/observability-ts/4.1.0/c3c198ecb64198c928243a3c22d22a646d516085}
     engines: {node: '>=26.8.1 <27'}
     peerDependencies:
       '@nestjs/common': ^11.0.0
       '@nestjs/core': ^11.1.17
       '@nestjs/graphql': ^13.2.4
-      '@omnixys/context-ts': ^4.0.2
-      '@omnixys/contracts-ts': ^4.0.0
+      '@omnixys/context-ts': ^4.1.0
+      '@omnixys/contracts-ts': ^4.1.0
       fastify: ^5.8.2
 
   '@opentelemetry/api-logs@0.213.0':
@@ -3390,44 +3390,44 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 27.0.0
 
-  '@omnixys/context-ts@4.0.2(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)':
+  '@omnixys/context-ts@4.1.0(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)':
     dependencies:
       '@fastify/cookie': 11.0.2
       '@nestjs/common': 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
       '@nestjs/core': 11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/graphql': 13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2)
-      '@omnixys/contracts-ts': 4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))
+      '@omnixys/contracts-ts': 4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))
       fastify: 5.8.5
       geoip-lite: 1.4.10
       graphql: 16.14.2
       rxjs: 7.8.2
       ua-parser-js: 1.0.41
 
-  '@omnixys/contracts-ts@4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))':
+  '@omnixys/contracts-ts@4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))':
     dependencies:
       '@nestjs/common': 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
       zod: 4.4.3
 
-  '@omnixys/logger-ts@4.0.0(b9679a7fc644f5206053cb534e4d1d5f)':
+  '@omnixys/logger-ts@4.1.0(8c3e26c1ba158aaa796f3866e6fd516f)':
     dependencies:
       '@nestjs/common': 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
       '@nestjs/core': 11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2)
-      '@omnixys/context-ts': 4.0.2(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)
-      '@omnixys/contracts-ts': 4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))
-      '@omnixys/observability-ts': 4.0.0(4ee7b548d43c3e75df64577411b228f4)
+      '@omnixys/context-ts': 4.1.0(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)
+      '@omnixys/contracts-ts': 4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))
+      '@omnixys/observability-ts': 4.1.0(e2b308042c5000e3290764aaa797e6fb)
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/api-logs': 0.213.0
       pino: 10.3.1
       pino-pretty: 13.1.3
       rxjs: 7.8.2
 
-  '@omnixys/observability-ts@4.0.0(4ee7b548d43c3e75df64577411b228f4)':
+  '@omnixys/observability-ts@4.1.0(e2b308042c5000e3290764aaa797e6fb)':
     dependencies:
       '@nestjs/common': 11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)
       '@nestjs/core': 11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/graphql': 13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2)
-      '@omnixys/context-ts': 4.0.2(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)
-      '@omnixys/contracts-ts': 4.0.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))
+      '@omnixys/context-ts': 4.1.0(@fastify/cookie@11.0.2)(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/graphql@13.4.2(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(@nestjs/core@11.1.27(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))(reflect-metadata@0.2.2)(rxjs@7.8.2))(graphql@16.14.2)(reflect-metadata@0.2.2))(@omnixys/contracts-ts@4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0)))(fastify@5.8.5)(graphql@16.14.2)(rxjs@7.8.2)
+      '@omnixys/contracts-ts': 4.1.0(@nestjs/common@11.1.28(reflect-metadata@0.2.2)(rxjs@7.8.2)(supports-color@7.2.0))
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/auto-instrumentations-node': 0.71.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.10.0(@opentelemetry/api@1.9.1))(supports-color@7.2.0)
       '@opentelemetry/context-async-hooks': 2.10.0(@opentelemetry/api@1.9.1)
