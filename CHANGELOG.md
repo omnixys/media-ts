@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [4.1.1](https://github.com/omnixys/media-ts/compare/v4.1.0...v4.1.1) (2026-09-19)
+
+### Deps
+
+* **Deps:** update omnixys contracts-ts package ([](https://github.com/omnixys/media-ts/commit/6b0b55b73561b827c4090bb18297736f4c1aac3b))
+
 ## [4.1.0](https://github.com/omnixys/media-ts/compare/v4.0.0...v4.1.0) (2026-09-04)
 
 ### Log
